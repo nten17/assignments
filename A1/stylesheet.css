@@ -1,30 +1,79 @@
 body{
   font-family: sans-serif;
   font-size: 18px;
+  margin: 2em;
+  background: #EFCEF2;
+}
+
+h1{
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1.3em;
+  color: #6C3483;
+}
+
+h2{
+  font-weight: 300;
+  font-size: 1.6em;
+  font-style: oblique;
+  line-height: 1.3em;
 }
 
 h3{
   font-weight: 300;
   margin: 0;
   font-size: 1em;
+  text-transform: uppercase;
+  color: #4532FF;
 }
 
 h4{
   font-weight: 200;
   margin-top: .5rem;
-  font-size: 1em;
+  font-size: .8em;
+  color: #808B96;
 }
 
 p{
   font-weight: 300;
   font-style: normal;
-  font-size: .5em;
+  font-size: 1.2em;
+}
+
+.one{
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+b{
+
+}
+
+b1{
+  font-weight: bold;
+}
+
+em{
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #808B96;
+  font-style: normal;
+}
+
+em1{
+  font-weight: 400;
+  font-size: 1.3em;
+  font-style: oblique;
+  line-height: 1.3em;
 }
 
 .hero-image-container{
   display: flex;
   align-content: center;
-  padding: 2rem;
+  margin-bottom: 1.5em;
 }
 
 .hero-image{
@@ -36,14 +85,10 @@ p{
 .heading-container{
   display: flex;
   align-content: center;
-  padding: 2rem;
   flex-direction: column;
+  margin-bottom: -1em;
 }
 
-.author{
-
-}
-
-.date{
-
+.artilce-name{
+  margin-top: -1em;
 }
