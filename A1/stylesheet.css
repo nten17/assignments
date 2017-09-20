@@ -1,27 +1,26 @@
 body{
-  font-family: sans-serif;
+  font-family: arial, sans-serif;
   font-size: 18px;
-  margin: 2em;
+  margin: 3em;
   background: #EFCEF2;
 }
 
 h1{
   font-weight: 600;
-  font-size: 2em;
-  line-height: 1.3em;
+  font-size: 2.5em;
+  line-height: 1em;
   color: #6C3483;
 }
 
 h2{
   font-weight: 300;
-  font-size: 1.6em;
+  font-size: 1.3em;
   font-style: oblique;
   line-height: 1.3em;
 }
 
 h3{
   font-weight: 300;
-  margin: 0;
   font-size: 1em;
   text-transform: uppercase;
   color: #4532FF;
@@ -40,34 +39,12 @@ p{
   font-size: 1.2em;
 }
 
-.one{
-  font-weight: 300;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 1em;
-}
-
-b{
-
-}
-
-b1{
-  font-weight: bold;
-}
-
 em{
   font-weight: 300;
   font-size: 1em;
   line-height: 1.5;
   color: #808B96;
   font-style: normal;
-}
-
-em1{
-  font-weight: 400;
-  font-size: 1.3em;
-  font-style: oblique;
-  line-height: 1.3em;
 }
 
 .hero-image-container{
@@ -82,6 +59,37 @@ em1{
   max-height: 100%;
 }
 
+.author{
+  margin-top: -1em;
+  margin-bottom: -1em;
+}
+
+.date{
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-color: #4532FF;
+}
+
+.name{
+  font-weight: bold;
+}
+
+.subheading{
+  margin-top: 4em;
+}
+
+.intro-container{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.intro{
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+
 .heading-container{
   display: flex;
   align-content: center;
@@ -89,6 +97,31 @@ em1{
   margin-bottom: -1em;
 }
 
+.subheading-container{
+  margin-top: 2em;
+}
+
 .artilce-name{
   margin-top: -1em;
+}
+
+.pull-quote-container{
+  background: #D6EAF8;
+  padding: 1em 0 1em 1em;
+}
+
+.pull-quote-border{
+  padding: 1em 0 1em 1em;
+  border-left-style: solid;
+  border-left-width: .1em;
+  border-color: #4532FF;
+}
+
+.pq-text{
+  font-weight: 400;
+  font-size: 1.2em;
+  font-style: oblique;
+  line-height: 1.3em;
+  margin: 0;
+  color: #4532FF;
 }
