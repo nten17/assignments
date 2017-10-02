@@ -1,17 +1,20 @@
 body{
-  font-family: 'muli', serif;
+  font-family: 'roboto', serif;
   font-size: 18px;
   color: white;
   margin: 0;
   /*background: #EFCEF2;*/
   background: red;
-  background: -webkit-linear-gradient(left, red,orange , yellow, green, blue, violet);
-  background: -o-linear-gradient( red, orange, yellow, green, blue, violet);
-  background: -moz-linear-gradient(red, orange, yellow, green, blue, violet);
-  background: linear-gradient(red, orange , yellow, green, blue, violet);
+  background: -webkit-linear-gradient(left, red,orange , yellow, green, blue, purple);
+  background: -o-linear-gradient( red, orange, yellow, green, blue, purple);
+  background: -moz-linear-gradient(red, orange, yellow, green, blue, purple);
+  background: linear-gradient(red, orange , yellow, green, blue, purple);
   margin: 5%;
 }
 
+div{
+  border-radius: 25px;
+}
 /*=================
 hero image
 =================*/
@@ -30,18 +33,21 @@ hero image
 header (title and author)
 =================*/
 
-.header, .article{
+.header, .article, .intro-container{
   background: hsla(311, 100%, 10%, 0.5);
   padding: 1% 5% 2% 5%;
   margin-top: 5%;
   border-radius: 25px;
 }
 
+h1, .subheading, .pull-quote{
+    font-family: 'roboto slab'
+}
+
 h1{
   font-size: 3rem;
   font-weight: 600;
   color: hsla(297, 100%, 50%, 1);
-  font-family: 'roboto slab'
 }
 
 h2, h3{
@@ -63,14 +69,19 @@ h2, h3{
 subheading
 =================*/
 
-#subheading{
+.subheading, .pull-quote{
+  /*border: 3px solid blue;*/
+  margin: 0 2% 0 2%;
+  padding: 0 2% 0 2%;
+}
+
+#subheading, .pq-text{
   font-size: 2rem;
-  font-style: italic;
-  padding: 5%;
-  color: hsla(212, 100%, 42%, 1);
+  /*font-style: italic;*/
+  color: blue;
   font-weight: 600;
-  margin-top: 2%;
-  margin-bottom: -2%
+  line-height: 2.3rem;
+  text-align: center;
 }
 
 @media only screen and (max-width: 700px){
@@ -80,10 +91,32 @@ subheading
 }
 
 /*=================
+intro
+=================*/
+
+.intro{
+  font-style: italic;
+}
+
+/*=================
 article copy
 =================*/
 
 p{
   font-weight: 200;
-  font-family: 'muli'
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+b{
+  font-weight: 600;
+}
+
+/*=================
+pull quote
+=================*/
+
+.pq-text, .pull-quote{
+  color: hsla(297, 100%, 50%, 1);
+  border-color: hsla(297, 100%, 50%, 1);
 }
