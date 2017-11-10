@@ -11,13 +11,13 @@ a {
   padding: 0;
 }
 
-#look-around{
+/*#look-around{
   color: #487CDB;
 }
 
 #look-around:hover {
   color: #FF3F74;
-}
+}*/
 
 /*==============
 HEADER
@@ -147,6 +147,8 @@ WELCOME
 
 .welcome-container {
   padding: 2rem;
+  padding-bottom: 0;
+  margin: 0;
 }
 
 .subheading{
@@ -208,7 +210,7 @@ DESIGN PAGE
     left: 50;
     padding: 0 .5rem 0 .5rem;
   }
-  .title {
+  .title, .date {
     max-width: none;
     font-size: 2rem;
     line-height: 2.2rem;
@@ -216,8 +218,9 @@ DESIGN PAGE
 }
 
 .date {
+  padding-top: .5rem;
+  margin: 0;
   font-style: italic;
-  font-size: 1.2rem;
 }
 
 .float-left {
@@ -249,29 +252,28 @@ ABOUT PAGE
 }
 
 .info {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.2rem;
-  line-height: 1.4rem;
+  line-height: 120%;
   max-width: 50vw;
 }
 
 .project-content {
   /*padding-bottom: 1rem;*/
   max-width: 50vw;
+  line-height: 135%;
 }
 
 @media only screen and (max-width: 660px) {
-  .project-content {
+  .project-content, .info {
     max-width: none;
   }
 }
 
 .portrait {
-  /*margin-left: 40vw;*/
   width: 30vw;
-  /*padding: 1rem;*/
-  padding-left: 30vw;
   padding-top: 2rem;
+  max-width: 400px;
 }
 
 /*==============
@@ -281,7 +283,18 @@ PROJECT page
 .images-container{
   max-width: 1020px;
   margin: auto;
-  right: 0;
-  left: 0;
+  right: 50%;
+  left: 50%;
   padding: 0 2rem 0 2rem;
+
+}
+
+.main-img, .img-item {
+  padding-top: 1rem;
+}
+
+.img-item {
+  width: 100%;
+  max-width: 30vw;
+  margin-left: 1rem;
 }
