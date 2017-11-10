@@ -1,16 +1,147 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Work Sans', sans-serif;
   background-color: navy;
   color: white;
 }
 
-.title{
-  padding-bottom: .5em;
-  padding-top: 0;
+a {
+  text-decoration: none;
+  color: inherit;
   margin: 0;
+  padding: 0;
 }
 
-.navigation {
-  margin-bottom: 0;
-  padding-bottom: 0;
+/*==============
+HEADER
+==============*/
+
+.name {
+  text-transform: uppercase;
+  color: #FF3F74;
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 80%;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.name:hover {
+  color: #FFE846;
+}
+
+.name:active {
+  transform: translateY(3px);
+}
+
+
+@media only screen and (max-width: 1050px) {
+  .name {
+    font-size: 72px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .name {
+    text-align: left;
+  }
+}
+
+/*==============
+navigation
+==============*/
+
+.nav {
+  text-decoration: none;
+  color: #487CDB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 32px;
+  font-weight: 600;
+  max-width: 1050px;  text-align: center;
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+  .nav {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .nav {
+    font-size: 16px;
+  }
+}
+
+.nav-item:hover {
+  text-decoration: line-through #FF3F74;
+}
+
+.nav-item:active {
+  transform: translateY(3px);
+}
+
+.line {
+  text-decoration: line-through #FF3F74;
+}
+
+/*==============
+WELCOME
+==============*/
+
+.hero{
+  /*width: 50vw;*/
+  height: 30vh;
+  margin-left: -10rem;
+  max-width: 400px;
+}
+
+.container {
+  margin-top: 4rem;
+  background-color: #487CDB;
+  width: 75vw;
+  height: 25vh;
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.subheading{
+  padding-left: 8%;
+  padding-right: 10%;
+  font-weight: 500;
+  line-height: 130%;
+  font-size: 21px;
+}
+
+/*==============
+DESIGN PAGE
+==============*/
+
+.img-overlap {
+  margin-left: -10rem;
+  max-width: 350px;
+}
+
+.project {
+  margin-left: 5%;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  max-width: 40vw;
+}
+
+.date {
+  font-style: italic;
+  font-size: 1.2rem;
 }
