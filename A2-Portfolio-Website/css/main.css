@@ -11,9 +11,24 @@ a {
   padding: 0;
 }
 
+#look-around{
+  color: #487CDB;
+}
+
+#look-around:hover {
+  color: #FF3F74;
+}
+
 /*==============
 HEADER
 ==============*/
+
+header {
+  /*position: fixed;*/
+  top: 0px;
+  left: 0;
+  width: 100%;
+}
 
 .name {
   text-transform: uppercase;
@@ -72,11 +87,20 @@ navigation
 @media only screen and (max-width: 1050px) {
   .nav {
     font-size: 26px;
+    padding: 0 2rem 0 2rem;
   }
 }
 
 @media only screen and (max-width: 660px) {
   .nav {
+    font-size: 24px;
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .nav {
+    padding: 0 1rem 0 1rem;
     font-size: 16px;
   }
 }
@@ -121,6 +145,10 @@ WELCOME
   align-items: center;
 }
 
+.welcome-container {
+  padding: 2rem;
+}
+
 .subheading{
   /*padding-left: 8%;
   padding-right: 10%;*/
@@ -130,7 +158,12 @@ WELCOME
   max-width: 1020px;
   padding: 0;
   margin: auto;
+}
 
+@media only screen and (max-width: 660px) {
+  .subheading {
+
+  }
 }
 
 /*==============
@@ -209,7 +242,7 @@ ABOUT PAGE
   /*background-color: #487CDB;*/
   max-width: 1020px;
   padding: 2rem;
-  padding-left: 4rem;
+  /*padding-left: 4rem;*/
   margin: auto;
   right: 0;
   left: 0;
@@ -225,6 +258,12 @@ ABOUT PAGE
 .project-content {
   /*padding-bottom: 1rem;*/
   max-width: 50vw;
+}
+
+@media only screen and (max-width: 660px) {
+  .project-content {
+    max-width: none;
+  }
 }
 
 .portrait {
@@ -244,5 +283,5 @@ PROJECT page
   margin: auto;
   right: 0;
   left: 0;
-  padding: 0 4rem 0 4rem;
+  padding: 0 2rem 0 2rem;
 }
