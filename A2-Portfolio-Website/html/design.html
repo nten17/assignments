@@ -6,10 +6,32 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/tachyons.min.css">
-
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,800" rel="stylesheet">
   </head>
+
   <body class="">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	jQuery('body').css('display','none');
+	jQuery(document).ready(function() {
+		jQuery('body').fadeIn();
+		jQuery('a').on('click',function(event){
+			var thetarget = this.getAttribute('target')
+			if (thetarget != "_blank"){
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				jQuery('body').fadeOut(function(){
+					//alert(thehref)
+					window.location = thehref
+				});
+			}
+		});
+	});
+	setTimeout(function(){
+		jQuery('body').fadeIn();
+	},1000)
+</script>
 
     <!-- HEADER -->
       <a class="no-underline" href="index.html">
@@ -20,20 +42,22 @@
     <!-- navigation -->
     <div class="nav">
       <a class="nav-item line" href="design.html">design</a>
-      <a class="nav-item" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
+      <a class="nav-item email" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
       <a class="nav-item" href="about.html">about</a>
     </div>
 
     <!-- PORTFOLIO -->
 
+    <div class="info-container">
+
       <!-- S&W pop-up -->
 
-      <div class="container flex-center-me">
+      <div class="project-container flex-center-me">
         <a href="/html/sw-pop-up.html">
           <img class="img-overlap" src="/portfolio-assets/pop-up/hannah-so-extra.jpg" alt="Sagmeister & Walsh Pop-up Project">
         </a>
 
-        <a class="project" href="/html/sw-pop-up.html">
+        <a class="project-info-container" href="/html/sw-pop-up.html">
           <p class="title">Sagmeister and Walsh Pop-Up Project</p>
           <p class="date">2017</p>
         </a>
@@ -42,33 +66,30 @@
 
       <!-- WAWP -->
 
-      <div class="flip container flex-center-me">
+      <div class="project-container flex-center-me">
 
+        <a href="/html/wawp.html">
+          <img class="img-overlap" src="/portfolio-assets/wawp/wawp-1.jpg" alt="We Are Wicked Pissed!">
+        </a>
 
-        <a class="project" href="/html/wawp.html">
+        <a class="project-info-container" href="/html/wawp.html">
           <p class="title">WE ARE WICKED PISSED!</p>
           <p class="date">2017</p>
         </a>
-
-        <a href="/html/sw-pop-up.html">
-          <img class="img-overlap right" src="/portfolio-assets/wawp/wawp-1.jpg" alt="We Are Wicked Pissed!">
-        </a>
-
       </div>
 
       <!-- Wiki -->
 
-      <div class="container flex-center-me">
-        <a href="/html/wiki.html">
-          <img class="img-overlap" src="/portfolio-assets/wiki/wiki-01.png" alt="Wikipedia Redesign Concept">
-        </a>
+      <div class="project-container flex-center-me">
+          <a href="/html/wiki.html">
+            <img class="img-overlap" src="/portfolio-assets/wiki/wiki-01.png" alt="Wikipedia Redesign Concept">
+          </a>
 
-        <a class="project" href="/html/wawp.html">
-          <p class="title">Wikipedia Redesign Concept</p>
-          <p class="date">2016</p>
-        </a>
-
+          <a class="project-info-container" href="/html/wawp.html">
+            <p class="title">Wikipedia Redesign Concept</p>
+            <p class="date">2016</p>
+          </a>
+        </div>
       </div>
-
   </body>
 </html>

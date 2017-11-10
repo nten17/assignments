@@ -6,26 +6,68 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/tachyons.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,800" rel="stylesheet">
 
   </head>
   <body class="">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	jQuery('body').css('display','none');
+	jQuery(document).ready(function() {
+		jQuery('body').fadeIn();
+		jQuery('a').on('click',function(event){
+			var thetarget = this.getAttribute('target')
+			if (thetarget != "_blank"){
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				jQuery('body').fadeOut(function(){
+					//alert(thehref)
+					window.location = thehref
+				});
+			}
+		});
+	});
+	setTimeout(function(){
+		jQuery('body').fadeIn();
+	},1000)
+</script>
+
     <!-- HEADER -->
-    <div class="pl5 pr5 navigation">
-      <a class="no-underline white" href="index.html"><p class="f1">Hey, I'm Naomi!</p></a>
+      <a class="no-underline" href="index.html">
+        <!-- <img class="name" src="/naomi.svg" alt="Naomi Tenenini"> -->
+        <p class="name">Naomi Tenenini</p>
+      </a>
+
+    <!-- navigation -->
+    <div class="nav">
+      <a class="nav-item" href="design.html">design</a>
+      <a class="nav-item email" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
+      <a class="nav-item line" href="about.html">about</a>
     </div>
 
-    <p class="f2 title pl5 pr5">Sagmeister & Walsh Pop-Up Project</p>
+    <!-- PROJECT -->
 
-    <div class="pb3 mw6 pl5 pr5">
-      <p>Created as a response to early design inspiration of part of the Aizone Brand Campaign that Sagmesiter & Walsh took on around 2013. The use of the body as a canvas was an incredibly interesting concept to me. I used this as the springboard for my own take on the structure of the pieces.
-      </p>
-      <p class="">Instead of focusing on a brand identity, I chose to focus on buzz words and terms of today in 2017. There was a 48 hour deadline put in place from conception, to development, photographing, and finalization.</p>
+
+    <div class="info-container">
+    <p class="title">Sagmeister & Walsh Pop-Up Project</p>
+
+    <p class="date">2017</p>
+
+      <div class="project-content">
+        <p>Created as a response to early design inspiration of part of the Aizone Brand Campaign that Sagmesiter & Walsh took on around 2013. The use of the body as a canvas was an incredibly interesting concept to me. I used this as the springboard for my own take on the structure of the pieces.
+        </p>
+        <p class="">Instead of focusing on a brand identity, I chose to focus on buzz words and terms of today in 2017. There was a 48 hour deadline put in place from conception, to development, photographing, and finalization.</p>
+      </div>
+
     </div>
 
-    <div class="pl5 pr5 pb5">
-      <img class="pb3" src="/portfolio-assets/pop-up/hannah-so-extra.jpg" alt="So Extra">
-      <img src="/portfolio-assets/pop-up/sally-yas.jpg" alt="Yas">
+    <div class="images-container">
+      <div class="">
+        <img class="pb3" src="/portfolio-assets/pop-up/hannah-so-extra.jpg" alt="So Extra">
+        <img src="/portfolio-assets/pop-up/sally-yas.jpg" alt="Yas">
+      </div>
     </div>
+
   </body>
 </html>

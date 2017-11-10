@@ -6,22 +6,54 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/tachyons.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,800" rel="stylesheet">
   </head>
   <body class="">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	jQuery('body').css('display','none');
+	jQuery(document).ready(function() {
+		jQuery('body').fadeIn();
+		jQuery('a').on('click',function(event){
+			var thetarget = this.getAttribute('target')
+			if (thetarget != "_blank"){
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				jQuery('body').fadeOut(function(){
+					//alert(thehref)
+					window.location = thehref
+				});
+			}
+		});
+	});
+	setTimeout(function(){
+		jQuery('body').fadeIn();
+	},1000)
+</script>
+
     <!-- HEADER -->
-    <div class="pl5 pr5 navigation">
-      <a class="no-underline white" href="index.html"><p class="f1">Hey, I'm Naomi!</p></a>
+      <a class="no-underline" href="index.html">
+        <!-- <img class="name" src="/naomi.svg" alt="Naomi Tenenini"> -->
+        <p class="name">Naomi Tenenini</p>
+      </a>
+
+    <!-- navigation -->
+    <div class="nav">
+      <a class="nav-item" href="design.html">design</a>
+      <a class="nav-item email" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
+      <a class="nav-item line" href="about.html">about</a>
     </div>
 
-    <p class="f2 title pl5 pr5">Wikipedia Redesign Concept</p>
 
-    <div class="pl5 pr5 description">
-      <p class="">A redesign for a single page, solely text-based interface for the worldwide encyclopedia.</p>
+    <div class="info-container">
+      <p class="title">Wikipedia Redesign Concept</p>
+      <p class="date">2016</p>
+
+        <p class="project-content">A redesign for a single page, solely text-based interface for the worldwide encyclopedia.</p>
     </div>
 
-    <div class="pl5 pr5">
+    <div class="images-container">
 
       <img class="pb3" src="/portfolio-assets/wiki/wiki-01.png" alt="">
 

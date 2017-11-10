@@ -12,6 +12,28 @@
   </head>
   <body class="">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	jQuery('body').css('display','none');
+	jQuery(document).ready(function() {
+		jQuery('body').fadeIn();
+		jQuery('a').on('click',function(event){
+			var thetarget = this.getAttribute('target')
+			if (thetarget != "_blank"){
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				jQuery('body').fadeOut(function(){
+					//alert(thehref)
+					window.location = thehref
+				});
+			}
+		});
+	});
+	setTimeout(function(){
+		jQuery('body').fadeIn();
+	},1000)
+</script>
+
     <!-- HEADER -->
       <a class="no-underline" href="index.html">
         <!-- <img class="name" src="/naomi.svg" alt="Naomi Tenenini"> -->
@@ -21,28 +43,32 @@
     <!-- navigation -->
     <div class="nav">
       <a class="nav-item" href="design.html">design</a>
-      <a class="nav-item" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
+      <a class="nav-item email" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
       <a class="nav-item line" href="about.html">about</a>
     </div>
 
 
     <!-- INFO AND SUCH -->
 
-    <div class="flip info-container">
+    <div class="info-container">
 
-      <p class="title">Info and such</p>
+      <p class="subheading">Info and such</p>
+      <div class="">
 
+      </div>
       <div class="info">
-        <p class="">I’m currently a student at Boston University persuing a BFA in graphic design. I enjoy having passionate conversations, eating mozzarella sticks, and making things with meaning.</p>
+        <p class="info-content">I’m currently a student at Boston University persuing a BFA in graphic design. I spceialize in print and web design and I'm pretty fun at parties too.</p>
 
-        <p>If any of this sounds good to you, let’s talk!</p>
+        <p class="info-content">I enjoy having passionate conversations, eating mozzarella sticks, and making things with meaning.</p>
+
+        <p class="info-content">If any of this sounds good to you, let’s talk!</p>
 
         <a class="underline white" href="mailto:naomi.tenenini@gmail.com?">naomi.tenenini@gmail.com</a>
         <p class="mt1">(in case you didn’t also see it above)</p>
 
       </div>
 
-      <img class="info-right img-overlap" src="/portrait.jpg" alt="Naomi's very candid portrait">
+      <img class="portrait" src="/portrait.jpg" alt="Naomi's very candid portrait">
 
     </div>
 

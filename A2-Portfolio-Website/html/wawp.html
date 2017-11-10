@@ -6,27 +6,60 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/tachyons.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600,800" rel="stylesheet">
   </head>
   <body class="">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	jQuery('body').css('display','none');
+	jQuery(document).ready(function() {
+		jQuery('body').fadeIn();
+		jQuery('a').on('click',function(event){
+			var thetarget = this.getAttribute('target')
+			if (thetarget != "_blank"){
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				jQuery('body').fadeOut(function(){
+					//alert(thehref)
+					window.location = thehref
+				});
+			}
+		});
+	});
+	setTimeout(function(){
+		jQuery('body').fadeIn();
+	},1000)
+</script>
+
     <!-- HEADER -->
-    <div class="pl5 pr5 navigation">
-      <a class="no-underline white" href="index.html"><p class="f1">Hey, I'm Naomi!</p></a>
+      <a class="no-underline" href="index.html">
+        <!-- <img class="name" src="/naomi.svg" alt="Naomi Tenenini"> -->
+        <p class="name">Naomi Tenenini</p>
+      </a>
+
+    <!-- navigation -->
+    <div class="nav">
+      <a class="nav-item" href="design.html">design</a>
+      <a class="nav-item email" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
+      <a class="nav-item line" href="about.html">about</a>
     </div>
 
-    <p class="f2 title pl5 pr5">WE ARE WICKED PISSED!</p>
 
-    <div class="pl5 pr5 description">
-      <p>A commentary, booklet, statement, and usable poster.</p>
+    <div class="info-container">
+      <p class="title">WE ARE WICKED PISSED!</p>
+      <p class="date">2017</p>
 
-      <p>Protesting has always been lively in the city of Boston. This piece reflects the protests of the 21st century while also keeping in mind it's history of rebellion that holds a humanistic energy and fire set within the typography. </p>
+      <div class="project-content">
+        <p>A commentary, booklet, statement, and usable poster.</p>
 
-      <p>The three articles inside educate the audience about the protests that took place regarding a history of those in the Boston Common, ones in response to decisions by the Trump Administration, and a reflection on what American politics have become.</p>
+        <p>Protesting has always been lively in the city of Boston. This piece reflects the protests of the 21st century while also keeping in mind it's history of rebellion that holds a humanistic energy and fire set within the typography. </p>
 
+        <p>The three articles inside educate the audience about the protests that took place regarding a history of those in the Boston Common, ones in response to decisions by the Trump Administration, and a reflection on what American politics have become.</p>
+
+      </div>
     </div>
-
-    <div class="">
+    <div class="images-container">
 
       <img class="pb3" src="/portfolio-assets/wawp/WAWP-gif-opening.gif" alt="Opening Gif">
 

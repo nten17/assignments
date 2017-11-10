@@ -11,6 +11,28 @@
   </head>
   <body class="">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	jQuery('body').css('display','none');
+	jQuery(document).ready(function() {
+		jQuery('body').fadeIn();
+		jQuery('a').on('click',function(event){
+			var thetarget = this.getAttribute('target')
+			if (thetarget != "_blank"){
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				jQuery('body').fadeOut(function(){
+					//alert(thehref)
+					window.location = thehref
+				});
+			}
+		});
+	});
+	setTimeout(function(){
+		jQuery('body').fadeIn();
+	},1000)
+</script>
+
     <!-- HEADER -->
       <a class="no-underline" href="index.html">
         <!-- <img class="name" src="/naomi.svg" alt="Naomi Tenenini"> -->
@@ -20,14 +42,14 @@
     <!-- navigation -->
     <div class="nav">
       <a class="nav-item" href="design.html">design</a>
-      <a class="nav-item" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
+      <a class="nav-item email" href="mailto:naomi.tenenini@gmail.com?" target="_top">naomi.tenenini@gmail.com</a>
       <a class="nav-item" href="about.html">about</a>
     </div>
 
     <!-- WELCOME -->
-    <div class="container flex-center-me">
-      <img class="hero" src="https://media2.giphy.com/media/3ohhwESi9BLJqW7J1C/giphy.gif" alt="">
-      <p class="subheading">Heyo! Feel free to look around and please make yourself at home.</p>
+    <div class="flex-center-me pa4 100vw items-center justify-center content-center">
+      <!-- <img class="hero" src="https://media2.giphy.com/media/3ohhwESi9BLJqW7J1C/giphy.gif" alt="waving bears"> -->
+      <p class="subheading">Heyo, I'm Naomi! Feel free to look around and please make yourself at home.</p>
     </div>
 
 
